@@ -24,3 +24,13 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
 }
+
+document.addEventListener('keydown', (event) => {
+  var code = event.code;
+  if (code == "ArrowLeft") {
+    plusSlides(-1)
+  }
+  if (code == "ArrowRight") {
+    plusSlides(1)
+  }
+}, false);
